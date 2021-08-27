@@ -41,10 +41,15 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     'djoser',
+    'warframedrop',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ('rest_framework.authentication.TokenAuthentication',)
+}
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
+    "http://localhost:4000",
 ]
 
 MIDDLEWARE = [
